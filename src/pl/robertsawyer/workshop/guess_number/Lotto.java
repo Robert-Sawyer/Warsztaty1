@@ -31,24 +31,51 @@ public class Lotto {
         Arrays.sort(typowane);
         System.out.println(Arrays.toString(typowane));
 
-//        Random r = new Random();
-//        wylosowane[0] = 1 + r.nextInt(49);
-//
-//        for (int i = 1; i < 6; ) {
-//            wylosowane[i] = 1 + r.nextInt(49);
-//            boolean unique = true;
-//            for (int j = 0; j < i; j++) {
-//                if (wylosowane[i] == wylosowane[j]) {
-//                    unique = false;
-//                    break;
-//                }
-//            }
-//            if (unique) {
-//                i++;
-//            }
-//        }
-//
-//            System.out.println(Arrays.toString(wylosowane));
+        Random r = new Random();
+        wylosowane[0] = 1 + r.nextInt(49);
+
+        for (int i = 1; i < 6; ) {
+            wylosowane[i] = 1 + r.nextInt(49);
+            boolean unique = true;
+            for (int j = 0; j < i; j++) {
+                if (wylosowane[i] == wylosowane[j]) {
+                    unique = false;
+                    break;
+                }
+            }
+            if (unique) {
+                i++;
+            }
+        }
+
+        int wyniki = 0;
+        for (int i = 1; i <= 6; i++) {
+            for (int j = 1; j <= 6; j++) {
+                if (typowane[i-1] == wylosowane[j-1]) {
+                    wyniki++;
+                    break;
+                } else {
+                    ;
+                }
+            }
+        }
+        if (wyniki == 3) {
+            System.out.println("Gratulacje. Trafiłeś 3 liczby. Zgłoś się po nagrodę.");
+        }
+        else if (wyniki == 4) {
+            System.out.println("Gratulacje. Trafiłeś 4 liczby. Zgłoś się po nagrodę.");
+        }
+        else if (wyniki == 5) {
+            System.out.println("Gratulacje. Trafiłeś 5 liczb. Zgłoś się po nagrodę.");
+        }
+        else if (wyniki == 6) {
+            System.out.println("JESTEŚ MILIONEREM! Gratulacje. Trafiłeś 6 liczb. Zgłoś się po nagrodę.");
+        }
+        else {
+            System.out.println("Niestety, nic nie wygrywasz.");
+        }
+
+            System.out.println(Arrays.toString(wylosowane));
 /*
         int[] liczby = new int[49];
         int nextVal = 1;
