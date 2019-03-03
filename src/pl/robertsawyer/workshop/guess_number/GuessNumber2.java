@@ -15,12 +15,11 @@ public class GuessNumber2 {
             guess = ((max - min) / 2) + min;
             System.out.println("Zgaduję: " + guess + ". Wybierz jedną z trzech opcji: 'za dużo', 'za mało', 'zgadłeś'.");
             Scanner scan = new Scanner(System.in);
-            String check = scan.next();
-            check = check.replaceAll(" ", "");
+            String check = scan.nextLine();
 
-            if (check.equals("zadużo")) {
+            if (check.equals("za dużo")) {
                 max = guess;
-            } else if (check.equals("zamało")) {
+            } else if (check.equals("za mało")) {
                 min = guess;
             } else if (check.equals("zgadłeś")) {
                 System.out.println("Wygrałem!");
