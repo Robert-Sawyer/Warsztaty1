@@ -18,6 +18,8 @@ public class GuessNumberApp {
         }
             int wprowadzonaLiczba = scan.nextInt();
 
+        // Sprawdzanie liczby
+
         while (true) {                                                          //pętla nieskończona while(dopóki jest prawdą)
             if (wprowadzonaLiczba < liczba) {
                 System.out.println("To za mało. Spróbuj jeszcze raz.");
