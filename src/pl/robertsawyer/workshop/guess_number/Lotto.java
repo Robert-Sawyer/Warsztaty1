@@ -21,7 +21,7 @@ public class Lotto {
 
         for (int i = 0; i < 6; ) {
             int liczba = scan.nextInt();
-            if (liczba < 1 && liczba > 49) {
+            if (liczba < 1 || liczba > 49) {
                 System.out.println("Podałeś liczbę za dużą lub za małą. Podaj liczbę z zakresu od 1 do 49: ");
             } else {
                 typowane[i] = liczba;
