@@ -11,6 +11,8 @@ public class Lotto {
         int[] wylosowane = new int[6];
         int[] typowane = new int[6];
 
+        //Typowanie liczb
+
         Scanner scan = new Scanner(System.in);
         System.out.println("Podaj 6 liczb z zakresu od 1 do 49 rozdzielając je enterem: ");
 
@@ -30,6 +32,8 @@ public class Lotto {
         }
         Arrays.sort(typowane);
         System.out.println(Arrays.toString(typowane));
+
+        //Losowanie liczb
 
         Random r = new Random();
         wylosowane[0] = 1 + r.nextInt(49);
